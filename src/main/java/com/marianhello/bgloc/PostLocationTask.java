@@ -153,7 +153,7 @@ public class PostLocationTask {
         int responseCode;
 
         try {
-            String jsonString = mConfig.getTemplate().locationToJson(location);
+            String jsonString = mConfig.getTemplate().locationToJson(location).toString();
             logger.debug("[INFO] Location String to server: {}", jsonString);
             JSONObject jsonLocation = new JSONObject(jsonString);
 
